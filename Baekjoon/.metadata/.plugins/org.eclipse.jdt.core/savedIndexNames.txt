@@ -1,3 +1,0 @@
-INDEX VERSION 1.131+C:\study\remind_algorithm\Baekjoon\.metadata\.plugins\org.eclipse.jdt.core
-1583952902.index
-3719453941.index
