@@ -12,6 +12,7 @@ public class Main_2110_공유기설치 {
 	 * 1. 내가 다시 이해한 것은 1에 설치, 4에 설치 하고 나머지를 8,9 중에 설치하면 최대거리가 3이 된다. 
 	 * 2. 거리 시작을 1로 주고, 가장 긴 거리는 마지막값 - 처음 값 이다.
 	 * 3. 좌표값을 정렬하고 , 중간값을 기준으로 c이상 설치할지 말지 판단
+	 * 
 	 */
 	public static void main(String[] args) {
 								
@@ -41,8 +42,10 @@ public class Main_2110_공유기설치 {
 			if (cnt >= C) {
 				res = mid;
 				start = mid + 1;
+				
 			} else {
 				end = mid - 1;
+				System.out.println(end);
 			}
 		}
 		System.out.println(res);
