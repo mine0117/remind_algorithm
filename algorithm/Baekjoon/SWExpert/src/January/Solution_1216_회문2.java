@@ -7,49 +7,53 @@ public class Solution_1216_È¸¹®2 {
 	public static void main(String args[]) {
 
 		Scanner sc = new Scanner(System.in);
-		for (int test = 1; test <= 10; test++) {
+
+		for (int test_case = 1; test_case <= 10; test_case++) {
 			int T = sc.nextInt();
+			int res = 1;
+			int[][] arr = new int[100][100];
 
-			int[][] map = new int[100][100];
 			for (int i = 0; i < 100; i++) {
-				String s = sc.next();
+				String str = sc.next();
 				for (int j = 0; j < 100; j++) {
-					map[i][j] = s.charAt(j) - 'A';
+					arr[i][j] = str.charAt(j);
 				}
 			}
 
-			int ans = 1;
-			for (int n = 2; n <= 100; n++) {
-				for (int i = 0; i < 100; i++) {
-					for (int j = 0; j <= 100 - n; j++) {
-						boolean flag = true;
-						for (int p = 0; p < n / 2; p++) {
-							if (map[i][j + p] != map[i][j + n - p - 1]) {
-								flag = false;
-								break;
-							}
-						}
-						if (flag && ans < n)
-							ans = n;
-					}
+			for (int i = 100; i > 1; i--) {
+				if (res > 1) {
+					break;
 				}
 
 				for (int j = 0; j < 100; j++) {
-					for (int i = 0; i <= 100 - n; i++) {
-						boolean ch = true;
-						for (int p = 0; p < n / 2; p++) {
-							if (map[i + p][j] != map[i + n - p - 1][j]) {
-								ch = false;
-								break;
+					for (int k = 0; k < 100 - i + 1; k++) {
+						int tmp = 0;
+						for (int l = 0; l < i / 2; l++) {
+							if (arr[j][k + l] != arr[j][k + i - k - 1]) {
+								tmp = -1;
 							}
+
 						}
-						if (ch && ans < n)
-							ans = n;
+						if (tmp == 0)
+							res = i;
 					}
 				}
+
+				for (int j = 0; j < 100 - i + 1; j++) {
+					for (int k = 0; k < 100; k++) {
+						int tmp = 0;
+						for (int l = 0; l < i / 2; l++) {
+							if (arr[j + k][l] != arr[j + i - k - 1][l]) {
+								tmp = -1;
+							}
+						}
+						if (tmp == 0) {
+							res = i;
+						}
+					}
+				}
+				System.out.println("#" + test_case + " " + res);
 			}
-			System.out.println("#" + T + " " + ans);
 		}
-
 	}
 }
