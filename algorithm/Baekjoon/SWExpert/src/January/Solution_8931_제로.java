@@ -22,7 +22,7 @@ public class Solution_8931_Á¦·Î {
 					stack.pop();
 				} else {
 					stack.add(num);
-				}
+				} 
 			}
 			int sum = 0;
 			while (!stack.isEmpty()) {
