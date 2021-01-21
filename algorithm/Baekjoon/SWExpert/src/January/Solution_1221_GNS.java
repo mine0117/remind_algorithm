@@ -25,12 +25,10 @@ public class Solution_1221_GNS {
 					}
 				}
 			}
-
 			Collections.sort(a);
 			System.out.println("#" + test_case);
 			for (int i = 0; i < n; i++) {
-				int tmp = a.get(i);
-			
+				int tmp = a.get(i);			
 				System.out.print(num[tmp] + " ");
 			}
 			System.out.println();
