@@ -82,7 +82,6 @@ public class binaryTree {
 			System.out.print(node.data + " ");
 		}
 	}
-
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
