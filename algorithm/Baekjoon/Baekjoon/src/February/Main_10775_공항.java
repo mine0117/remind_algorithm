@@ -1,19 +1,43 @@
 package February;
 
-<<<<<<< HEAD
 import java.util.Scanner;
 
-=======
->>>>>>> 28467a66e5593f5201f5b0d1416d1b56824966e1
 public class Main_10775_°øÇ× {
 
-	public static void main(String[] args) {
-		
-<<<<<<< HEAD
-		Scanner sc = new Scanner(System.in);
-=======
->>>>>>> 28467a66e5593f5201f5b0d1416d1b56824966e1
+	static int[] parent;
 
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
+		int M = sc.nextInt();
+		parent = new int[N + 1];
+
+		for (int i = 0; i <= N; i++) {
+			parent[i] = i;
+		}
+		int answer = 0;
+
+		while (M-- > 0) {
+			int gate = sc.nextInt();
+			if (find(gate) == 0)
+				break;
+			answer++;
+			union(find(gate), find(gate) - 1);
+		}
+	}
+
+	private static void union(int a, int b) {
+		a = find(a);
+		b = find(b);
+		parent[a] = b;
+
+	}
+
+	private static int find(int x) {
+		if (x == parent[x])
+			return x;
+		return parent[x] = find(parent[x]);
 	}
 
 }
