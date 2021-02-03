@@ -39,5 +39,4 @@ public class Main_10775_°øÇ× {
 			return x;
 		return parent[x] = find(parent[x]);
 	}
-
 }
