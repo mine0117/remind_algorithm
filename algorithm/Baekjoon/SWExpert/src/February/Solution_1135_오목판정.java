@@ -10,6 +10,7 @@ public class Solution_1135_오목판정 {
 	
 		int T = sc.nextInt();
 		int N = sc.nextInt();
+		
 	}
 
 }
