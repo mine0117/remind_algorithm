@@ -36,6 +36,7 @@ public class SWEA_5948_새샘이의735게임 {
 			
 			list.addAll(set);
 			Collections.sort(list, Collections.reverseOrder());
+			
 			System.out.println("#" + test_case + " " + list.get(4));
 		}
 	}
