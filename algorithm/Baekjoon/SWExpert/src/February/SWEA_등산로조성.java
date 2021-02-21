@@ -9,6 +9,8 @@ public class SWEA_등산로조성 {
 	
 		int T = sc.nextInt();
 		
-		
+		for (int test_case = 1; test_case <= T; test_case++) {
+			
+		}
 	}
 }
