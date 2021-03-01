@@ -9,6 +9,8 @@ public class SWEA_¹Ì·Î1 {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		int T = sc.nextInt();
+		
 		
 		
 		
