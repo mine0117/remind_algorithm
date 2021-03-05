@@ -18,13 +18,6 @@ public class SWEA_¹Ì·Î1 {
 			
 		}
 		
-		
-		
-		
-		
-		
-		
-		
 	}
 
 }
