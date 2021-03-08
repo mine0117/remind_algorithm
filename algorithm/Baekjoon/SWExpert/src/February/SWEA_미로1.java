@@ -3,7 +3,8 @@ package February;
 import java.util.Scanner;
 
 public class SWEA_¹Ì·Î1 {
-
+	
+	static int [][]map;
 	public static void main(String[] args) {
 		
 		
